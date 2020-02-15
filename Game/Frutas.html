@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   canvas{
+    border: solid;
+    border-color: gray; 
+    margin: 0 500px 0 500px; 
+   }
+  </style>
+</head>
+<body>
+<canvas id="canvas" width="250" height="250"> 
+<script>
+//ORIGINAL DE FILIPE DESCHAMPS//
+//ISSO É UMA CÓPIA DO PRIMEIRO JOGO MULTIPLAYER//    
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = 'yellow';
+
+fruta = {
+x: Math.floor(Math.random() * 230 / 5), 
+y: Math.floor(Math.random() * 230 / 5), 
+desenha: function(){
+ ctx.fillStyle = 'green';  
+ ctx.fillRect(this.x,this.y, 20, 20);
+}
+}
+
+
+player = {
+x: 10,
+y: 10,  
+desenha: function(){
+ctx.fillStyle = 'yellow';  
+ctx.fillRect(this.x, this.y, 21, 21);           
+}
+}     
+
+document.addEventListener('keydown', (event) => {
+  const keyName = event.key;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);  
+  if(keyName == 'ArrowUp'){
+   if(player.y != 0){
+   player.y = player.y - 2;  
+  }
+  }
+  if(keyName == 'ArrowDown'){
+   if(player.y != 230){ 
+   player.y = player.y + 2; 
+  }
+  }
+  if(keyName == 'ArrowLeft'){
+   if(player.x != 0){
+   player.x = player.x - 2; 
+  }
+  }
+  if(keyName == 'ArrowRight'){
+   if(player.x != 230){
+    player.x = player.x + 2; 
+   }
+  }
+  //
+  if(player.x == fruta.x){
+   fruta.x = Math.floor(Math.random() * 230);
+   fruta.y = Math.floor(Math.random() * 230); 
+   fruta.desenha()
+  }
+  if(player.y == fruta.y){
+   fruta.x = Math.floor(Math.random() * 230),
+   fruta.y = Math.floor(Math.random() * 230), 
+   fruta.desenha()
+  }
+  
+  ctx.fillStyle = 'yellow';
+  fruta.desenha()
+  player.desenha()        
+});
+  if(player.x == fruta.x){
+   fruta.x = Math.floor(Math.random() * 230);
+   fruta.y = Math.floor(Math.random() * 230); 
+   fruta.desenha()
+  }
+  if(player.y == fruta.y){
+   fruta.x = Math.floor(Math.random() * 230),
+   fruta.y = Math.floor(Math.random() * 230), 
+   fruta.desenha()
+  }
+
+ fruta.desenha()
+ player.desenha();
+</script>
+</body>
+</html>            
