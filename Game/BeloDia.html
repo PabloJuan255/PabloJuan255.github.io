@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <style>
+      canvas{                  
+     border: gainsboro solid;
+     background-color: aqua;  
+     }  
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="250"<canvas>
+    <script>
+    ctx = document.getElementById('canvas').getContext('2d')
+
+player = {
+x: 0,
+desenha: function(){
+ ctx.fillStyle = 'black';
+ //Perna Esquerda
+ ctx.fillRect(this.x,120,10,10);
+ //Perna Direita 
+ ctx.fillRect(this.x + 20,120,10,10);
+ //Barriga
+ ctx.fillRect(this.x + 10,110,10,10);
+ ctx.fillRect(this.x + 10,100,10,10);  
+ //Braço Esquerdo
+ ctx.fillRect(this.x,100,10,10);
+ //Braço Direito
+ ctx.fillRect(this.x + 20,100,10,10);
+ //Cabeça
+ ctx.fillRect(this.x + 10,90,10,10);
+}
+}
+             
+chao = {
+y: 130,
+desenha: function(){        
+ ctx.fillStyle = 'yellowgreen';
+ ctx.fillRect(0,this.y,250,100);  
+}
+}
+ceu = {
+ desenha: function(){
+ 
+ //Nuvens//
+ ctx.fillStyle = 'white';
+ ctx.fillRect(10,10,10,10);
+ ctx.fillRect(20,0,10,10);
+ ctx.fillRect(30,0,10,10);
+ ctx.fillRect(20,10,10,10);
+
+ ctx.fillRect(50,10,10,10);
+ ctx.fillRect(60,0,10,10);
+ ctx.fillRect(70,0,10,10);
+ ctx.fillRect(60,10,10,10);
+
+ ctx.fillRect(40,10,10,10);
+ ctx.fillRect(60,0,10,10);
+ ctx.fillRect(90,0,10,10);
+ ctx.fillRect(80,10,10,10);           
+ 
+ //Borda do sol//
+ ctx.fillStyle = 'orange';
+ ctx.fillRect(200,0,40,40);
+  
+ //Dentro do sol//
+ ctx.fillStyle = 'yellow';
+ ctx.fillRect(210,10,25,25);
+
+ }  
+}  
+
+document.addEventListener('keydown', (event) => {
+  const keyName = event.key;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);  
+  if(keyName == 'ArrowLeft'){
+   if(player.x != 0){
+   player.x = player.x - 2; 
+  }
+  }
+  if(keyName == 'ArrowRight'){
+   if(player.x != 220){
+    player.x = player.x + 2; 
+   }
+  }
+
+    player.desenha()
+    chao.desenha()
+    ceu.desenha()
+  })
+  player.desenha()        
+
+             
+
+
+
+player.desenha();
+chao.desenha();
+ceu.desenha();  
+    </script>
+  </body>
+</html>
