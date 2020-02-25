@@ -1,1 +1,5 @@
-https://pablojuan255.github.io/Game/"NOME_DO_JOGO_"
+https://pablojuan255.github.io/Game/Frutas.html
+https://pablojuan255.github.io/Game/BeloDia.html
+https://pablojuan255.github.io/Game/policiaeladrao_solo.html
+
+ou volte para a home page: https://pablojuan255.github.io/index.html
