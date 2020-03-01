@@ -6,3 +6,9 @@ title-ar{
 hr{
  margin: 0 500px 0 500px;
 }
+img{
+  padding: 100px 100px 100px 100px;
+  border-radius: 500px 500px 500px 500px;
+  border: gray solid;
+  margin: 0 500px 0 500px;
+}
