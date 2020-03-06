@@ -60,30 +60,22 @@ document.addEventListener('keydown', (event) => {
     player.x = player.x + 2; 
    }
   }
-  //
   if(player.x - fruta.x < 21){
    fruta.x = Math.floor(Math.random() * 230) * 10 / 10
    fruta.y = Math.floor(Math.random() * 230) * 10 / 10
+   if(player.y - fruta.y < 21){
+    fruta.x = Math.floor(Math.random() * 230) * 10 / 10
+    fruta.y = Math.floor(Math.random() * 230) * 10 / 10
+    fruta.desenha()
+   }
   }
-  if(player.y - fruta.y < 21){
-   fruta.x = Math.floor(Math.random() * 230) * 10 / 10
-   fruta.y = Math.floor(Math.random() * 230) * 10 / 10
-   fruta.desenha()
-  }
+
   
   ctx.fillStyle = 'yellow';
   fruta.desenha()
   player.desenha()        
 });
-  if(player.x - fruta.x < 21){
-   fruta.x = Math.floor(Math.random() * 230) * 10 / 10
-   fruta.y = Math.floor(Math.random() * 230) * 10 / 10
-  }
-  if(player.y - fruta.y < 21){
-   fruta.x = Math.floor(Math.random() * 230) * 10 / 10
-   fruta.y = Math.floor(Math.random() * 230) * 10 / 10
-   fruta.desenha()
-  }
+
 
  fruta.desenha()
  player.desenha();
