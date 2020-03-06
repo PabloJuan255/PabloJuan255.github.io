@@ -33,7 +33,7 @@ x: 10,
 y: 10,  
 desenha: function(){
 ctx.fillStyle = 'yellow';  
-ctx.fillRect(this.x, this.y, 21, 21);           
+ctx.fillRect(this.x, this.y, 20, 20);           
 }
 }     
 
@@ -61,14 +61,13 @@ document.addEventListener('keydown', (event) => {
    }
   }
   //
-  if(player.x == fruta.x){
-   fruta.x = Math.floor(Math.random() * 230);
-   fruta.y = Math.floor(Math.random() * 230); 
-   fruta.desenha()
+  if(player.x - fruta.x < 21){
+   fruta.x = Math.floor(Math.random() * 230) * 10 / 10
+   fruta.y = Math.floor(Math.random() * 230) * 10 / 10
   }
-  if(player.y == fruta.y){
-   fruta.x = Math.floor(Math.random() * 230),
-   fruta.y = Math.floor(Math.random() * 230), 
+  if(player.y - fruta.y < 21){
+   fruta.x = Math.floor(Math.random() * 230) * 10 / 10
+   fruta.y = Math.floor(Math.random() * 230) * 10 / 10
    fruta.desenha()
   }
   
@@ -76,13 +75,13 @@ document.addEventListener('keydown', (event) => {
   fruta.desenha()
   player.desenha()        
 });
-  if(player.x == fruta.x){
-   fruta.x = Math.floor(Math.random() * 230);
-   fruta.y = Math.floor(Math.random() * 230); 
+  if(player.x - fruta.x < 21){
+   fruta.x = Math.floor(Math.random() * 230) * 10 / 10
+   fruta.y = Math.floor(Math.random() * 230) * 10 / 10
   }
-  if(player.y == fruta.y){
-   fruta.x = Math.floor(Math.random() * 230),
-   fruta.y = Math.floor(Math.random() * 230), 
+  if(player.y - fruta.y < 21){
+   fruta.x = Math.floor(Math.random() * 230) * 10 / 10
+   fruta.y = Math.floor(Math.random() * 230) * 10 / 10
    fruta.desenha()
   }
 
