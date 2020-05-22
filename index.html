@@ -1,27 +1,38 @@
 <!doctype html>
 <html>
-<head>
-  <title>Pablo Juan</title>
-  
- <meta name="keywords" content="Blog,Pessoal,Dog clicker,Dog os">
- <meta name="google-site-verification" content="zRGah4ZdINEPEkcIoyn6yAj44BnxBHF562QAGvm0sQ8">
- <meta name="description" content="Meu site/blog pessoal com alguns códigos que eu fiz.">
- <meta name="author" content="Pablo Juan">
- <meta name="title" content="Pablo Juan">
+ <head>
+  <title>Pablo Juan</title>  
+  <meta name="keywords" content="Blog,Pessoal,Dog clicker,Dog os">
+  <meta name="google-site-verification" content="zRGah4ZdINEPEkcIoyn6yAj44BnxBHF562QAGvm0sQ8">
+  <meta name="description" content="Meu site/blog pessoal com alguns  códigos que eu fiz.">
+  <meta name="author" content="Pablo Juan">
+  <meta name="title" content="Pablo Juan">
+  <style>
+    a{
+    font-family: Arial;
+    }
+    button{
+      border: 0px;
+      margin: 0px 550px 0px 550px;
+    }
 
+    body{
+      transition: all 0.7s; 
+    }
 
+    .night{
+      color: white;
+      background-color: #000011;
+    }
+    </style>
+   <link rel="shortcut icon" href="https://avatars1.githubusercontent.com/u/59847214?s=460&u=36876cb3ccab3c3c96e8b43b4242123684e3639f&v=4" type="image/png" />
 
-<style>
-  a{
-  font-family: Arial;
-  }
-</style>
-<link rel="shortcut icon" href="https://avatars1.githubusercontent.com/u/59847214?s=460&u=36876cb3ccab3c3c96e8b43b4242123684e3639f&v=4" type="image/png" />
-</head>
-<body>
+  </head>
+  <body>
+    <button onclick="mudatema()" id="teste">Tema</button><br>
     <img src="https://instagram.fvdc6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/52181636_1164777893691031_8830590504472150016_n.jpg?_nc_ht=instagram.fvdc6-1.fna.fbcdn.net&_nc_ohc=ok3t1xdlUGgAX_VLaz6&oh=f74ebeafb216acd6955b67d7af828ad9&oe=5ECDE349" style="border-radius: 1000px;">
     
-    <h1 style="font-family: Arial;">Olá! eu sou Pablo Juan!<br></h1>
+    <h1 style="font-family: Arial;">Olá! Eu sou Pablo Juan!</h1> 
     
     <h2 style="font-family: Arial;">
     conheça algums de meus projetos:</h2><br>
@@ -35,7 +46,7 @@
     <iframe height="400px" width="100%" src="https://pablojuan255.github.io/Game/policiaeladrao_solo.html" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     <h3 style="font-family: Arial;">
 
-    se não carregar, <a href="https://pablojuan255.github.io/Game/policiaeladrao_solo.html">clique aqui</a>.</h3>
+    se não carregar, <a href="https://pt-br.guides.instructure.com/m/73741/l/494549-quais-navegadores-sao-suportados-pelo-canvas">clique aqui</a>.</h3>
 
     <hr>
     <h2 style="font-family: Arial;">
@@ -45,6 +56,38 @@
     <hr>
     <!-- <a href="PabloJuan255.github.io/Dog-clicker.html"><strong>Dog Clicker</strong></a>.<br />
     <a href="PabloJuan255.github.io/Nina.html"><strong>Nina - Minha Cachorra</strong></a>.<br /> 
-    <a href="PabloJuan255.github.io/Au-Au!.html"><strong>Motor de busca Au-Au (Cancelado)</strong></a>.<br /> --->                
- </body>
+    <a href="PabloJuan255.github.io/Au-Au!.html"><strong>Motor de busca Au-Au (Cancelado)</strong></a>.<br />
+    <hr>
+    ---> 
+    <h1 style="font-family: Arial;">Contato:</h1>
+    <img src="https://drvendas.com.br/wp-content/uploads/2018/08/logo-gmail-1.png"  gmail-logo height="50" width="60">
+    
+    <img src="https://seeklogo.com/images/I/instagram-logo-3EDAAFAF47-seeklogo.com.png" height="50" width="50" instagram-old-logo style="margin: 0 500px 0 500px;">
+    
+    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-2-1.png" facebook-logo height="50" width="50"><br>
+   
+    <a href="mailto:pablojuanoliveira009@gmail.com">
+    pablojuanoliveira009
+    </a>
+    
+    <a href="https://www.instagram.com/pablojuan100/" style="margin:0 400px 0 400px">
+    pablojuan100
+    </a>
+    
+    <a href="https://www.facebook.com/profile.php?id=100018220277190">
+    pablojuanoliveira009
+    </a> 
+
+
+    <script>
+      if(localStorage.getitem('modo') == 'night'){
+        document.body.classList.toggle('night');
+      }
+
+      function mudatema(){
+        document.body.classList.toggle('night');
+        localStorage.setItem('modo',document.body.classList +"");
+      }
+    </script>
+  </body>
 </html>
