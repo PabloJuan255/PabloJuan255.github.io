@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Free world - Pablo Juan</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+   <link rel="shortcut icon" href="https://avatars1.githubusercontent.com/u/59847214?s=460&u=36876cb3ccab3c3c96e8b43b4242123684e3639f&v=4" type="image/png" />    
+  </head>
+  <body>
+    <a-scene background="color: #198CFF" id="a-scene">
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#FFFFFF" shadow></a-plane>
+     <a-entity id="#cam"camera="" position="0.27264136512286846 1.6 -0.8024107480822839" wasd-controls="" rotation="-7.792226013779193 7.56304289572687 0" look-controls="pointerLockEnabled: true" aframe-injected="" data-aframe-inspector-original-camera="" ></a-entity>
+   </a-scene>
+   <script>
+    var cam = document.getElementById('#cam');
+
+document.addEventListener('keydown', (event) => {
+  key = event.key;
+  var cam_x = cam.getAttribute('position').x;
+  var cam_y = cam.getAttribute('position').y;
+  var cam_z = cam.getAttribute('position').z;
+  if(key == "i"){
+    box = document.createElement('a-box');
+    box.setAttribute('position',cam_x + 5 +" "+ -2 + " " + cam_z + 10); //GaMbIaRrA a GeNtE aCeItA
+    box.setAttribute('color','#4CC3D9')    
+    box.setAttribute('height', 2);
+    box.setAttribute('animation','property: position; to:'+ cam_x + 10 +' '+ 0 +" "+ cam_z + 10 +'; dur: 100; easing: linear; loop: false');
+    box.setAttribute('static-body','')
+    document.getElementById('a-scene').appendChild(box);
+   }
+  if(key == "o"){
+    sph = document.createElement('a-sphere');
+    sph.setAttribute('position',cam_x + 5 +" "+ -2 + " " + cam_z + 10); //GaMbIaRrA a GeNtE aCeItA
+    sph.setAttribute('color','#4CC3D9')    
+    sph.setAttribute('height', 2);
+    sph.setAttribute('animation','property: position; to:'+ cam_x + 10 +' '+ 1 +" "+ cam_z + 10 +'; dur: 100; easing: linear; loop: false');
+    sph.setAttribute('static-body','')
+    document.getElementById('a-scene').appendChild(sph);
+   }
+  if(key == "p"){
+    cyl = document.createElement('a-cylinder');
+    cyl.setAttribute('position',cam_x + 5 +" "+ -2 + " " + cam_z + 10); //GaMbIaRrA a GeNtE aCeItA
+    cyl.setAttribute('color','#4CC3D9')    
+    cyl.setAttribute('height', 2);
+    cyl.setAttribute('animation','property: position; to:'+ cam_x + 10 +' '+ 1 +" "+ cam_z + 10 +'; dur: 100; easing: linear; loop: false');
+    cyl.setAttribute('static-body','')
+    document.getElementById('a-scene').appendChild(cyl);
+   }
+   })
+   </script>   
+  </body>
+</html>
